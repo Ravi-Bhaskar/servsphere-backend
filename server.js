@@ -13,7 +13,9 @@ dotenv.config();
 const app = express();
 
 //middleware
-app.use(cors());
+app.use(cors({
+    origin: ["https://servsphere.vercel.app"]
+}));
 app.use(express.json());
 
 //connect to MongoDB
